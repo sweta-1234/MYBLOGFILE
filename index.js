@@ -10,7 +10,10 @@ function myfunction(){
         x.type = "password";
     }
 }
-
+function checklogin(){
+    if(localStorage.getItem('admin'))
+    window.location.href = "home.html"
+}
 
 function validate(){
     
@@ -19,7 +22,7 @@ function validate(){
     if(username=="admin" && password == "user")
     {
         alert("Login Successful");
-       // localStorage.setItem("username" , username);
+        localStorage.setItem('username' , 'admin');
         window.location.replace("home.html");
         return false;
     }
